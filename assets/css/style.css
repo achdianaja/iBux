@@ -1,0 +1,412 @@
+:root{
+    --bs-white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bg-white{
+    background-color: var(--bs-white);
+}
+
+/* Container Style */
+.container {
+    width: 100%;
+    padding-right: 13px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .search input {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Navbar Style */
+.navbar {
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    border-bottom: 1px solid #888;
+}
+
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar-bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-item {
+    margin: 0 30px
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-item .nav-link:hover {
+    color: red;
+}
+
+
+.navbar-item .nav-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search .icon-search {
+    position: absolute;
+    left: 10px;
+    color: #888;
+}
+
+.search input {
+    border-radius: 25px;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #000;
+    width: 500px;
+    font-size: 12px;
+}
+
+.search input::placeholder {
+    font-size: 12px;
+    color: #888;
+}
+
+.search input:focus {
+    border-color: #000000;
+    outline: none;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.icon-search {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+/* Sidebar Style */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: width 0.3s ease;
+    background-color: #F5F7F8;
+}
+
+.sidebar .sidebar-link {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 0.1px solid #888;
+}
+
+button.sidebar-toggle {
+    font-size: 15px;
+    display: none;
+    padding: 10px;
+    background: none;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.link-icon {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar .sidebar-link.show {
+    opacity: 1;
+}
+
+.search-sidebar {
+    padding: 15px 25px;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    position: sticky;
+    top: 0;
+}
+
+.search-sidebar input:focus {
+    border-color: #fff;
+    outline: none;
+}
+
+.search-sidebar input {
+    border-radius: 25px;
+    padding: 10px 12px 10px 12px;
+    border: 1px solid #000;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Scroll horizontal Style */
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+
+    .sidebar {
+        top: 76px;
+        height: calc(100% - 76px);
+        transition: 0.3s ease;
+    }
+
+    .sidebar a {
+        font-size: 20px;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .navbar .sidebar {
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar-bottom,
+    .navbar-nav {
+        display: none;
+    }
+
+    .nav-item.search {
+        display: none;
+    }
+
+    button.sidebar-toggle {
+        display: block;
+    }
+
+    .navbar-brand a {
+        font-weight: bold;
+    }
+
+    .icon-user {
+        display: none;
+    }
+
+    .navbar-nav {
+        display: flex;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .navbar-item,
+    .search-sidebar input {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+/* Grid Layout Styles */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 600px) {
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 768px) {
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
