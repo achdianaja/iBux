@@ -7,8 +7,7 @@
     <title>iBux</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/icons/fontawesome/css/all.min.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/js/flickityjs/flickity.css">
 </head>
 
 <body>
@@ -25,7 +24,6 @@
                     <i class="fa fa-search icon-search"></i>
                     <input type="text" id="search" placeholder="Search" class="">
                 </div>
-
                 <div class="nav-item">
                     <a href="account.html" class="link-icon icon-user">
                         <i class="fa fa-user"></i>
@@ -36,20 +34,18 @@
                     </a>
                 </div>
             </div>
+        </div>
 
-            <div class="navbar-bottom">
-                <ul class="navbar-nav">
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link">Mac</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link">iPhone</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link">iPad</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="navbar-bottom">
+                <div class="navbar-item">
+                    <a href="#" class="nav-link">Mac</a>
+                </div>
+                <div class="navbar-item">
+                    <a href="#" class="nav-link">iPhone</a>
+                </div>
+                <div class="navbar-item">
+                    <a href="#" class="nav-link">iPad</a>
+                </div>
         </div>
     </nav>
 
@@ -67,29 +63,11 @@
     </aside>
 
     <main>
-
         <section id="hero">
-            <div class="carousel-container">
-                <div class="mySlides slide">
-                    <img src="assets/image/Hero1.jpg" style="width:100%">
-                    <div class="text">Caption Text</div>
-                </div>
-                
-                <div class="mySlides slide">
-                    <img src="assets/image/Hero2.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
-                </div>
-                
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            </div>
-            <div class="container-dot" style="text-align:center">
-                <div class="bg-dot">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
+            <div class="main-gallery">
+                <img src="assets/image/Hero1.jpg" class="gallery-cell">
+                <img src="assets/image/Hero2.jpg" class="gallery-cell">
+                <img src="assets/image/Hero3.jpg" class="gallery-cell">
             </div>
         </section>
 
@@ -137,8 +115,9 @@
         </section>
     </main>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/flickityjs/flickity.pkgd.js"></script>
     <script src="assets/icons/fontawesome/js/all.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
